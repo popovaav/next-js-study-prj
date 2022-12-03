@@ -1,5 +1,6 @@
 import App from 'next/app';
 import PropTypes from 'prop-types';
+import '../styles/global.scss';
 
 function MainApp({ Component, pageProps }) {
   return (
