@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar Snapshot checking 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <main
+      class="main"
+    >
+      <div
+        class="errorBody"
+      >
+        <h1
+          class="title"
+        >
+          pageNotFound
+        </h1>
+      </div>
+    </main>
+    <footer
+      class="footer"
+    >
+      <a
+        href="https://onix-systems.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        poweredBy
+         
+        onix
+      </a>
+    </footer>
+  </div>
+</div>
+`;
