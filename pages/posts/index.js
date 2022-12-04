@@ -1,36 +1,25 @@
+import PropTypes from 'prop-types';
 import AllPosts from '../../src/components/PostComponents/AllPosts/AllPosts';
+import { getFeaturedPost } from '../../utils/PostsUtils';
 
-const dummyPosts = [
-  {
-    title: 'Getting started',
-    image: 'getting-started-nextjs.png',
-    excerpt: 'Next JS is a framework',
-    date: '2022-12-03',
-    slug: 'getting-started-with-next-js'
-  },
-  {
-    title: 'Getting started',
-    image: 'getting-started-nextjs.png',
-    excerpt: 'Next JS is a framework',
-    date: '2022-12-03',
-    slug: 'getting-started-with-next-js2'
-  },
-  {
-    title: 'Getting started',
-    image: 'getting-started-nextjs.png',
-    excerpt: 'Next JS is a framework',
-    date: '2022-12-03',
-    slug: 'getting-started-with-next-js3'
-  }
-];
-
-const AllPostsPage = () => {
+const AllPostsPage = ({ posts }) => {
   return (
-    <>
-      <div>Posts</div>
-      <AllPosts posts={dummyPosts} />
-    </>
+    <AllPosts posts={posts} />
   );
 };
+
+AllPostsPage.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.shape({})).isRequired
+};
+
+export function getStaticProps() {
+  const featuredPosts = getFeaturedPost();
+
+  return {
+    props: {
+      posts: featuredPosts
+    }
+  };
+}
 
 export default AllPostsPage;
