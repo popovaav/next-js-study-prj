@@ -1,6 +1,8 @@
+import PostContent from '../../src/components/PostComponents/PostContent/PostContent';
+
 const PostPage = () => {
   return (
-    <div>Post</div>
+    <PostContent />
   );
 };
 
