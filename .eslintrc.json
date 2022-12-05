@@ -7,7 +7,7 @@
     },
     "plugins": ["jest"],
     "parser": "babel-eslint",
-    "extends": ["airbnb", "plugin:import/typescript"],
+    "extends": ["airbnb", "plugin:import/typescript", "plugin:react/recommended"],
     "settings": {
         "import/resolver": {
             "node": {
