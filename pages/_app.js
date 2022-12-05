@@ -1,11 +1,15 @@
 import App from 'next/app';
 import PropTypes from 'prop-types';
 import '../styles/global.scss';
+import { Head } from 'next/document';
 import Layout from '../src/components/Layout/Layout';
 
 function MainApp({ Component, pageProps }) {
   return (
     <Layout>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <Component {...pageProps} />
     </Layout>
   );
